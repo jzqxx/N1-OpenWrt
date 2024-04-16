@@ -10,6 +10,8 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 rm -rf feeds/packages/lang/golang
 
 # Add packages
-# git clone https://github.com/JohnstonIrene/My-Pkg package/my-pkg
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git -b main package/passwall_package
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
